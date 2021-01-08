@@ -30,27 +30,12 @@ if ("serviceWorker" in navigator) {
 
 // dark mode 
 
-const btnToggle = document.querySelector('.btn-toggle');
 
-btnToggle.addEventListener('click', () => {
-
-    const body = document.body;
-
-    if(body.classList.contains('dark')){
-
-        body.classList.add('light')
-        body.classList.remove('dark')
-        btnToggle.innerHTML = "Go Dark"
-
-    } else if(body.classList.contains('light')){
-
-        body.classList.add('dark')
-        body.classList.remove('light')
-        btnToggle.innerHTML = "Go Light"
-
-    }
-
-})
+function toggleDarkLight() {
+    var body = document.getElementById("body");
+    var currentClass = body.className;
+    body.className = currentClass == "dark-mode" ? "light-mode" : "dark-mode";
+  }
 
 // barre navigation 
 
